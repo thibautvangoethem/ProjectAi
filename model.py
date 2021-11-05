@@ -15,13 +15,15 @@ class EASE:
         items = self.item_enc.fit_transform(df.loc[:, 'recipe_id'])
         return users, items
 
-    def fit(self, df, lambda_: float = 0.5, implicit=True):
+    def fit(self, df, lambda_: float = 0.5, implicit=False):
         """
         df: pandas.DataFrame with columns user_id, item_id and (rating)
         lambda_: l2-regularization term
         implicit: if True, ratings are ignored and taken as 1, else normalized ratings are used
         """
         users, items = self._get_users_and_items(df)
+        temp = df['rating'].to_numpy()
+        temp2=df['rating'].max()
         values = np.ones(df.shape[0]) if implicit else df['rating'].to_numpy() / df['rating'].max()
 
         X = csr_matrix((values, (users, items)))
