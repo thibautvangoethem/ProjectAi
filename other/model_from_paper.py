@@ -4,6 +4,10 @@ import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 from tqdm import tqdm
 
+'''
+This class contains the model that was made by the researchers and not by us. Please refer to the implementation folder to see the implementation we made
+'''
+
 
 class EASE:
     def __init__(self):
