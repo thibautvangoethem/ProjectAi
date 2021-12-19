@@ -1,0 +1,12 @@
+6528 are the total amount of user in validation fold0
+2731 are not predicted for as their item contains something that is below the threshold
+still
+easer recall@5,10,20 = 0.013786764705882353,0.020833333333333332,0.03262867647058824
+easer ndcg@5,10,20 = 0.009151513766222055,0.011409928793355017,0.014396394451212014
+=> this is beter than any hyperparamer optimised fold in the sparse predictor and only a few points below easer (splitting her was 15)
+=> predicted for 3797 users => rescaled recall@20 of  0.056096
+
+for items between 8 and 15
+easer recall@5,10,20 = 0.0006127450980392157,0.0007659313725490196,0.001838235294117647
+easer ndcg@5,10,20 = 0.0005361519607843138,0.0005844768499978139,0.0008446597311922068
+=> Here 5086 were not predicted for 6528 => predicted for 1442 => rescaled recall @20 of 0.00832175
